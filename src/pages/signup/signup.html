@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button (click)="signup()" ion-button full color="primary" [disabled]="!email || !password">Signup</button>
+    <button (click)="goToLogin()" ion-button full color="primary" clear class="login">Login instead</button>
+  </div>
+</ion-content>
